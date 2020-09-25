@@ -22,7 +22,8 @@ public class LilSaltyBlocks {
     }
     //NOTE TO FUTURE VIEWERS: I have no clue what .func_235861_h_() does.
     public static final AbstractBlock.Properties P_SALT_BLOCK = AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().harvestTool(ToolType.SHOVEL);
-
+    public static final AbstractBlock.Properties P_SALT_ORE = AbstractBlock.Properties.create(Material.ROCK);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ALilSalty.MOD_ID);
     public static final RegistryObject<Block> SALT_BLOCK = generateItemAndBlock("salt_block", new SaltBlock(P_SALT_BLOCK), ItemGroup.BUILDING_BLOCKS);
+    public static final RegistryObject<Block> SALT_ORE = generateItemAndBlock("salt_ore", new SaltBlock(P_SALT_ORE), ItemGroup.BUILDING_BLOCKS);
 }
