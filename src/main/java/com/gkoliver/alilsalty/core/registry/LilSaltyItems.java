@@ -12,5 +12,5 @@ public class LilSaltyItems {
     public static final Item.Properties P_SALT = new Item.Properties().maxStackSize(64).group(ItemGroup.MISC);
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ALilSalty.MOD_ID);
-    public static final RegistryObject<Item> SALT = ITEMS.register("salt", new Item(P_SALT));
+    public static final RegistryObject<Item> SALT = ITEMS.register("salt", ()->new Item(P_SALT));
 }

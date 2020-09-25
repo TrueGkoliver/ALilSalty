@@ -1,9 +1,12 @@
 package com.gkoliver.alilsalty;
 
+import com.gkoliver.alilsalty.core.registry.LilSaltyBlocks;
+import com.gkoliver.alilsalty.core.registry.LilSaltyItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -27,9 +30,10 @@ public class ALilSalty
     private static final Logger LOGGER = LogManager.getLogger();
 
     public ALilSalty() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        eventBus.addListener(this::setup);
+        LilSaltyItems.ITEMS.register(eventBus);
+        LilSaltyBlocks.BLOCKS.register(eventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event)  {}
