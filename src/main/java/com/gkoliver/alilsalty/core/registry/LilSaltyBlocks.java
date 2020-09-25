@@ -8,4 +8,5 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class LilSaltyBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ALilSalty.MOD_ID);
+
 }
