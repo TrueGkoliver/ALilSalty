@@ -1,0 +1,13 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "ingredients" : [
+    {
+      "item" : "alilsalty:salt"
+    },
+    {"item" : "minecraft:ice"}, {"item" : "minecraft:ice"}, {"item" : "minecraft:ice"}, {"item" : "minecraft:packed_ice"}, {"item" : "minecraft:ice"}, {"item" : "minecraft:ice"}, {"item" : "minecraft:ice"}, {"item" : "minecraft:ice"}
+  ],
+  "result" : {
+    "item" : "minecraft:packed_ice",
+    "count" : "8"
+  }
+}
