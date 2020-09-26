@@ -15,13 +15,13 @@ public class LilSaltyItems {
     public static final Item.Properties P_SALT = new Item.Properties().maxStackSize(64).group(ItemGroup.MISC);
 
     //FOODS
-    public static final Food F_CURED_BEEF = new Food.Builder().effect(()->new EffectInstance(Effects.STRENGTH, 15*20), 1.0F).build();
-    public static final Food F_CURED_PORK = new Food.Builder().effect(()->new EffectInstance(Effects.REGENERATION, 15*20), 1.0F).build();
-    public static final Food F_CURED_MUTTON = new Food.Builder().effect(()->new EffectInstance(Effects.RESISTANCE, 15*20), 1.0F).build();
-    public static final Food F_CURED_CHICKEN = new Food.Builder().effect(()->new EffectInstance(Effects.SLOW_FALLING, 15*20), 1.0F).build();
-    public static final Food F_CURED_COD = new Food.Builder().effect(()->new EffectInstance(Effects.HASTE, 15*20), 1.0F).build();
-    public static final Food F_CURED_SALMON = new Food.Builder().effect(()->new EffectInstance(Effects.SPEED, 15*20), 1.0F).build();
-    public static final Food F_CURED_RABBIT = new Food.Builder().effect(()->new EffectInstance(Effects.LUCK, 15*20), 1.0F).build();
+    public static final Food F_CURED_BEEF = new Food.Builder().effect(()->new EffectInstance(Effects.STRENGTH, 15*20), 1.0F).hunger(8).saturation(0.8F).meat().build();
+    public static final Food F_CURED_PORK = new Food.Builder().effect(()->new EffectInstance(Effects.REGENERATION, 15*20), 1.0F).hunger(8).saturation(0.8F).meat().build();
+    public static final Food F_CURED_MUTTON = new Food.Builder().effect(()->new EffectInstance(Effects.RESISTANCE, 15*20), 1.0F).hunger(6).saturation(0.8F).meat().build();
+    public static final Food F_CURED_CHICKEN = new Food.Builder().effect(()->new EffectInstance(Effects.SLOW_FALLING, 15*20), 1.0F).hunger(6).saturation(0.6F).meat().build();
+    public static final Food F_CURED_COD = new Food.Builder().effect(()->new EffectInstance(Effects.HASTE, 15*20), 1.0F).hunger(5).saturation(0.6F).build();
+    public static final Food F_CURED_SALMON = new Food.Builder().effect(()->new EffectInstance(Effects.SPEED, 15*20), 1.0F).hunger(6).saturation(0.8F).build();
+    public static final Food F_CURED_RABBIT = new Food.Builder().effect(()->new EffectInstance(Effects.LUCK, 15*20), 1.0F).hunger(5).saturation(0.6F).meat().build();
     
     
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ALilSalty.MOD_ID);
