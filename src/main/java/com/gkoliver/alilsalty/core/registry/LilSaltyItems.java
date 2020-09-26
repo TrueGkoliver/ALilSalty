@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class LilSaltyItems {
     //ITEM PROPERTIES
     public static final Item.Properties P_SALT = new Item.Properties().maxStackSize(64).group(ItemGroup.MISC);
-
+    public static final Item.Properties P_FOOD = new Item.Properties().maxStackSize(64).group(ItemGroup.FOOD);
     //FOODS
     public static final Food F_CURED_BEEF = new Food.Builder().effect(()->new EffectInstance(Effects.STRENGTH, 15*20), 1.0F).hunger(8).saturation(0.8F).meat().build();
     public static final Food F_CURED_PORK = new Food.Builder().effect(()->new EffectInstance(Effects.REGENERATION, 15*20), 1.0F).hunger(8).saturation(0.8F).meat().build();
@@ -26,4 +26,13 @@ public class LilSaltyItems {
     
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ALilSalty.MOD_ID);
     public static final RegistryObject<Item> SALT = ITEMS.register("salt", ()->new Item(P_SALT));
+
+    //Food items
+    public static final RegistryObject<Item> CURED_BEEF = ITEMS.register("cured_beef", ()->new Item(P_FOOD.food(F_CURED_BEEF)));
+    public static final RegistryObject<Item> CURED_PORK = ITEMS.register("cured_pork", ()->new Item(P_FOOD.food(F_CURED_PORK)));
+    public static final RegistryObject<Item> CURED_MUTTON = ITEMS.register("cured_mutton", ()->new Item(P_FOOD.food(F_CURED_MUTTON)));
+    public static final RegistryObject<Item> CURED_CHICKEN = ITEMS.register("cured_chicken", ()->new Item(P_FOOD.food(F_CURED_CHICKEN)));
+    public static final RegistryObject<Item> CURED_COD = ITEMS.register("cured_cod", ()->new Item(P_FOOD.food(F_CURED_COD)));
+    public static final RegistryObject<Item> CURED_SALMON = ITEMS.register("cured_salmon", ()->new Item(P_FOOD.food(F_CURED_SALMON)));
+    public static final RegistryObject<Item> CURED_RABBIT = ITEMS.register("cured_rabbit", ()->new Item(P_FOOD.food(F_CURED_RABBIT)));
 }
