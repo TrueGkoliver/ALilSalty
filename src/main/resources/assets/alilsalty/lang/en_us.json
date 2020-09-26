@@ -5,5 +5,8 @@
   "item.alilsalty.cured_mutton" : "Cured Mutton",
   "item.alilsalty.cured_rabbit" : "Cured Rabbit",
   "item.alilsalty.cured_cod" : "Cured Cod",
-  "item.alilsalty.cured_salmon" : "Cured Salmon"
+  "item.alilsalty.cured_salmon" : "Cured Salmon",
+
+  "block.alilsalty.salt_block" : "Salt Block",
+  "block.alilsalty.salt_ore" : "Salt Ore"
 }
