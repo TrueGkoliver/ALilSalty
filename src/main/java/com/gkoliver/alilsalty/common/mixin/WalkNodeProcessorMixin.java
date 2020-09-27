@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(WalkNodeProcessor.class)
 public class WalkNodeProcessorMixin {
-    public static final Block SALT = Blocks.MAGMA_BLOCK;
+    private static final Block SALT = Blocks.MAGMA_BLOCK;
     @Inject(method="func_237238_b_", at=@At("HEAD"))
     protected static void evaluate(IBlockReader blockReader, BlockPos pos, CallbackInfoReturnable<PathNodeType> ci) {
         BlockState blockstate = blockReader.getBlockState(pos);
