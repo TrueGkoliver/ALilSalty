@@ -1,9 +1,16 @@
 package com.gkoliver.alilsalty;
 
 import com.gkoliver.alilsalty.core.registry.LilSaltyBlocks;
+import com.gkoliver.alilsalty.core.registry.LilSaltyFeatures;
 import com.gkoliver.alilsalty.core.registry.LilSaltyItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.placement.CountRangeConfig;
+import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,5 +43,7 @@ public class ALilSalty
         LilSaltyBlocks.BLOCKS.register(eventBus);
     }
 
-    private void setup(final FMLCommonSetupEvent event)  {}
+    private void setup(final FMLCommonSetupEvent event)  {
+        LilSaltyFeatures.saltOreAddLoop();
+    }
 }
