@@ -1,6 +1,7 @@
 package com.gkoliver.alilsalty.core.registry;
 
 import com.gkoliver.alilsalty.ALilSalty;
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -26,7 +27,7 @@ public class LilSaltyItems {
     
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ALilSalty.MOD_ID);
     //public static final RegistryObject<Item> SALT = ITEMS.register("salt", ()->new Item(P_SALT));
-
+    public static final RegistryObject<Item> SALT = ITEMS.register("salt", ()->new BlockNamedItem(LilSaltyBlocks.SALT_PILE.get(), P_SALT));
     //Food items
     public static final RegistryObject<Item> CURED_BEEF = ITEMS.register("cured_beef", ()->new Item(P_FOOD.food(F_CURED_BEEF)));
     public static final RegistryObject<Item> CURED_PORK = ITEMS.register("cured_pork", ()->new Item(P_FOOD.food(F_CURED_PORK)));
