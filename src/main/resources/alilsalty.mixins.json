@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.gkoliver.alilsalty.common.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8",
+  "refmap": "alilsalty.refmap.json",
+  "mixins": [
+    "WalkNodeProcessorMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
