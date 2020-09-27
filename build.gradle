@@ -6,12 +6,18 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
+mixin {
+    add sourceSets.main, "alilsalty.refmap.json"
+}
+
 
 version = '0.1'
 group = 'com.gkoliver.alilsalty' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -42,9 +48,9 @@ minecraft {
 
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
-
+            arg "-mixin.config=alilsalty.mixins.json"
             mods {
-                examplemod {
+                alilsalty {
                     source sourceSets.main
                 }
             }
@@ -58,9 +64,9 @@ minecraft {
 
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
-
+            arg "-mixin.config=alilsalty.mixins.json"
             mods {
-                examplemod {
+                alilsalty {
                     source sourceSets.main
                 }
             }
