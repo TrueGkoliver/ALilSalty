@@ -25,7 +25,7 @@ public class LilSaltyItems {
     
     
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ALilSalty.MOD_ID);
-    public static final RegistryObject<Item> SALT = ITEMS.register("salt", ()->new Item(P_SALT));
+    //public static final RegistryObject<Item> SALT = ITEMS.register("salt", ()->new Item(P_SALT));
 
     //Food items
     public static final RegistryObject<Item> CURED_BEEF = ITEMS.register("cured_beef", ()->new Item(P_FOOD.food(F_CURED_BEEF)));

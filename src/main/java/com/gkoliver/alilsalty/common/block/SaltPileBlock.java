@@ -16,7 +16,10 @@ public class SaltPileBlock extends Block {
         super(properties);
         properties.tickRandomly();
     }
-
+    public static void popOff(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        spawnDrops(state, worldIn, pos);
+        worldIn.removeBlock(pos, false);
+    }
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         if (worldIn.canSeeSky(pos) && worldIn.isRainingAt(pos)) {} ;
