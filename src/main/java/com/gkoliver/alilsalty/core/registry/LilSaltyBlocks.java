@@ -22,8 +22,8 @@ public class LilSaltyBlocks {
         return tbr;
     }
     //NOTE TO FUTURE VIEWERS: I have no clue what .func_235861_h_() does.
-    public static final AbstractBlock.Properties P_SALT_BLOCK = AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().harvestTool(ToolType.SHOVEL);
-    public static final AbstractBlock.Properties P_SALT_ORE = AbstractBlock.Properties.create(Material.ROCK);
+    public static final AbstractBlock.Properties P_SALT_BLOCK = AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().harvestTool(ToolType.SHOVEL).harvestLevel(0);
+    public static final AbstractBlock.Properties P_SALT_ORE = AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1);
     public static final AbstractBlock.Properties P_SALT_PILE = AbstractBlock.Properties.create(Material.SAND).doesNotBlockMovement().notSolid();
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ALilSalty.MOD_ID);
