@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class WalkNodeProcessorMixin {
     private static final Block SALT = LilSaltyBlocks.SALT_BLOCK.get();
     @Inject(method="func_237238_b_", at=@At("HEAD"))
-    protected static void evaluate(IBlockReader blockReader, BlockPos pos, CallbackInfoReturnable<PathNodeType> ci) {
+    private static void evaluate(IBlockReader blockReader, BlockPos pos, CallbackInfoReturnable<PathNodeType> ci) {
         BlockState blockstate = blockReader.getBlockState(pos);
         PathNodeType type = blockstate.getAiPathNodeType(blockReader, pos);
         if (type != null) ci.setReturnValue(type);
